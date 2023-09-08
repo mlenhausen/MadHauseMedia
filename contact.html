@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MadHause Media</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/Asset 4mhmlogo_circledemo.png">
+    <script src="https://kit.fontawesome.com/94c6583cfa.js" crossorigin="anonymous"></script>
+</head>
+    <body>
+        <div class="loading-animation"><div class="loading-svg"></div></div>
+        <div class="header">
+            <div class="mobile">
+                <h1><a href="index.html"><img src="images/Asset 4mhmlogo_circledemo.png" alt="MHM logo"></a></h1>
+                <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+                <label for="openSidebarMenu" class="sidebarIconToggle">
+                    <div class="spinner diagonal part-1"></div>
+                    <div class="spinner horizontal"></div>
+                    <div class="spinner diagonal part-2"></div>
+                </label>
+                <div id="sidebarMenu">
+                    <ul class="sidebarMenuInner">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="drop" onclick="toggleSubMenu(this)">Services <i class="fa fa-angle-down" style="font-size:10px;"></i>
+                            <ul>
+                                <li><a uk-scroll href="design.html">Design</a></li>
+                                <li><a uk-scroll href="media.html">Media</a></li>
+                                <li><a uk-scroll href="photography.html">Photography</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h1 class="desktop"><a href="index.html">MadHause Media</a></h1>
+            <div class="contain">
+                <ul class="nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="drop"><a href="#">Services <i class="fa fa-angle-down" style="font-size:10px;"></i></a>
+                        <ul>
+                            <li><a href="design.html">Design</a></li>
+                            <li><a href="media.html">Media</a></li>
+                            <li><a href="photography.html">Photography</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="hero5 fadein">
+            <div class="container">
+                <div class="contact-info">
+                    <h1>Contact us.</h1>
+                    <h3>
+                        Let's collaborate and bring your vision to life. Whether you have a project in mind or just 
+                        want to discuss your ideas, we're here to listen and help. Reach out to us today!
+                    </h3>
+                </div>
+
+                <form action="https://formspree.io/f/mzbleknk" method="POST" class="contact-form">
+            
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your first name...">
+                
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+                
+                    <label class="required" for="email">*Your email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required></br>
+                
+                    <label for="message">*Message:</label>
+                    <textarea id="message" name="message" placeholder="Write something..." requried style="height:200px"></textarea>
+                
+                    <div class="contactbutton"><button class="contactbutton-inner" type="submit" value="Send">Send</button></div>
+            
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <ul class="social">
+            <li class="email"><a target="_blank" href="mailto: info@madhausemedia.com" title="Email"><i class="fa fa-regular fa-envelope"></i></a></li>
+            <li class="instagram"><a target="_blank" href="https://instagram.com/madhausemedia/" title="Instagram"><i class="fa fa-brands fa-instagram"></i></a></li>
+        </ul>
+        <p style="color: #FFF;">&copy; MadHause Media 2023. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

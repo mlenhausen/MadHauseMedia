@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MadHause Media</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/Asset 4mhmlogo_circledemo.png">
+    <script src="https://kit.fontawesome.com/94c6583cfa.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="loading-animation"><div class="loading-svg"></div></div>
+    <div class="header">
+        <div class="mobile">
+            <h1><a href="index.html"><img src="images/Asset 4mhmlogo_circledemo.png" alt="MHM logo"></a></h1>
+            <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+            <label for="openSidebarMenu" class="sidebarIconToggle">
+                <div class="spinner diagonal part-1"></div>
+                <div class="spinner horizontal"></div>
+                <div class="spinner diagonal part-2"></div>
+            </label>
+            <div id="sidebarMenu">
+                <ul class="sidebarMenuInner">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="drop" onclick="toggleSubMenu(this)">Services <i class="fa fa-angle-down" style="font-size:10px;"></i>
+                        <ul>
+                            <li><a uk-scroll href="design.html">Design</a></li>
+                            <li><a uk-scroll href="media.html">Media</a></li>
+                            <li><a uk-scroll href="photography.html">Photography</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <h1 class="desktop"><a href="index.html">MadHause Media</a></h1>
+        <div class="contain">
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="drop"><a href="#">Services <i class="fa fa-angle-down" style="font-size:10px;"></i></a>
+                    <ul>
+                        <li><a href="design.html">Design</a></li>
+                        <li><a href="media.html">Media</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+<header class="about-header">
+    <h1><img src="images/about/Asset 3madhause_word.png" alt="MADHAUSE"><br>Residents</h1>
+  </header>
+
+  <main class="about-hero">
+    <section class="company-info fadein">
+      <img src="images/about/us_sitting.png" alt="Us sitting together">
+      <div class="company-description">
+        <h2>Welcome to Our Company</h2>
+        <p>MadHause Media is a multimedia creative agency designed to bring stories to life. MadHause Media is made of 
+            <span class="highlight">Mad</span>eline Len<span class="highlight">hause</span>n and <span class="highlight">Mad</span>eleine Noricks. 
+            Madhause Media is a place where creativity thrives and flourishes. It aligns with the concept of a "Mad House" 
+            being full of energy, excitement, and innovation. At the same time, our company is a welcoming and nurturing space 
+            for clients to explore and realize their creative visions across various multimedia services, such as design, photography, 
+            social media management, content creation, and video editing.
+            </p>
+      </div>
+    </section>
+
+    <section class="founder-info fadein">
+      <img src="images/about/demo_headshot_purple.png" alt="Madeline Lenhausen headshot">
+      <div class="founder-bio">
+        <h2>Madeline Lenhausen</h2>
+        <h4>FOUNDER | CREATIVE DIRECTOR</h4>
+        <p>Madeline (Mads) is a creative enthusiast who has thrived in the world of imagination her whole life. She
+            grew up making short skits with her friends and family, and was always looking for her next adventure. Today,
+            she holds a PhD in personality psychology and incorporates this knowledge into her workflow, be it designs, photography,
+            or skits.
+        </p>
+      </div>
+    </section>
+
+    <section class="founder-info fadein" id="founder-MN">
+      <div class="founder-bio">
+        <h2>Madeleine Noricks</h2>
+        <h4>CO-FOUNDER | CREATIVE PRODUCER</h4>
+        <p>Madeleine is the organizational glue behind the creative madness that is MadHause Media. She specializes in 
+            project design, management, and planning. Her degree in sociology ensures her ability to understand interpersonal
+            relations and behavioral motivations. This enables her to excel in leadership and management of any team or 
+            project that comes her way.
+        </p>
+      </div>
+      <img src="images/about/MNdemoheadshot_purple.png" alt="Madeleine Noricks headshot">
+    </section>
+  </main>
+      
+
+
+<footer>
+    <ul class="social">
+        <li class="email"><a target="_blank" href="mailto: info@madhausemedia.com" title="Email"><i class="fa fa-regular fa-envelope"></i></a></li>
+        <li class="instagram"><a target="_blank" href="https://instagram.com/madhausemedia/" title="Instagram"><i class="fa fa-brands fa-instagram"></i></a></li>
+    </ul>
+    <p style="color: #FFF;">&copy; MadHause Media 2023. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
