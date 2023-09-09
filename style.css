@@ -145,7 +145,7 @@ body, html {
     }
 
     .drop li a {
-      color: #131118;
+      color: #100224;
     }
     
 
@@ -1344,7 +1344,7 @@ width: 22px;
   position: absolute;
   height: 3px;
   width: 100%;
-  background-color: #B396F2;
+  background-color: #BA93F9;
 }
 
 .horizontal {
@@ -1491,7 +1491,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 
 .sidebarMenuInner ul li a {
-  color: #30039A;
+  color: #100224;
   text-decoration: none;
   display: block;
   padding: 10px;
@@ -1774,7 +1774,7 @@ color: white;
   border-radius: 10px;
   padding: 12px 20px;
   background-color: transparent;
-  color: rgb(175, 175, 175);
+  color: #FCFAFF;
   font-size: 18px;
   font-weight: bold;
   text-align: left;
@@ -1784,14 +1784,14 @@ color: white;
 }
 
 .accordion-button:hover {
-  background-color: #af0066;
+  background-color: #D41A02;
 }
 
 .accordion-content {
   max-height: 0;
   opacity: 0;
   padding: 0;
-  color: rgb(175, 175, 175);
+  color:  #FCFAFF;
   overflow: hidden;
   transition: max-height .5s ease, opacity 2s ease;
 }
@@ -1861,7 +1861,7 @@ color: white;
 
 .website {
   max-width: 290px;
-  background: linear-gradient(45deg, #8141B9, #D5093D);
+  background: #A486D4;
   padding: 20px;
   color: #FFF;
   margin: 20px;
@@ -1893,8 +1893,8 @@ color: white;
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #715AFF;
-  color: #ffffff;
+  background-color: #FCFAFF;
+  color: #A486D4;
   text-decoration: none;
   border-radius: 5px;
   margin-top: auto; /* Push the link to the bottom */
@@ -1902,7 +1902,8 @@ color: white;
 }
 
 .website a:hover {
-  background-color: #af0066;
+  background-color: #6610F2;
+  color: #FCFAFF;
 }
 
 .row {
@@ -1998,6 +1999,10 @@ color: white;
   justify-content: center;
 }
 
+.iphone img {
+  width: 150%;
+}
+
 
 .iphone-description {
   flex: 1;
@@ -2065,7 +2070,7 @@ color: white;
 }
 
 .card__face--front {
-  background: crimson;
+  background: #D41A02;
 }
 
 .card__face--front h2 {
@@ -2073,7 +2078,7 @@ color: white;
 }
 
 .card__face--back {
-  background: slateblue;
+  background: #A486D4;
   transform: rotateY(180deg);
 }
 
