@@ -1338,6 +1338,7 @@ width: 22px;
   width: 100%;
   background-color: #B396F2;
 }
+
 .horizontal {
   transition: all 0.3s;
   box-sizing: border-box;
@@ -1522,6 +1523,11 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+
+  .hero-inner .symbol {
+    max-width: 32%;
+    object-fit: cover;
   }
 
   .swirl {
