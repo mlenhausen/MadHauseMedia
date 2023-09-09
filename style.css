@@ -9,7 +9,7 @@ body, html {
     background-size: cover;
     padding: 0px;
     background-repeat: no-repeat;
-    font-family: 'voluta';
+    font-family: 'voluta-light';
   }
 
   /*{
@@ -27,28 +27,18 @@ body, html {
 }
 
 @font-face {
-  font-family: 'mont';
-  src: url('fonts/montserrat/Montserrat-Light.otf') format('opentype');
-}
-
-@font-face {
-  font-family: 'poppins-light';
-  src: url('fonts/poppins/Poppins-Light.otf') format('opentype');
-}
-
-@font-face {
-  font-family: 'poppins-thin';
-  src: url('fonts/poppins/Poppins-thin.otf') format('opentype');
-}
-
-@font-face {
   font-family: 'voluta';
-  src: url('fonts/voluta.otf') format('opentype');
+  src: url('fonts/voluta-web/Voluta-Regular.woff') format('opentype');
 }
 
 @font-face {
-  font-family: 'campton';
-  src: url('fonts/campton/Campton-LightDEMO.otf') format('opentype');
+  font-family: 'voluta-light';
+  src: url('fonts/voluta-web/Voluta-Light.woff') format('opentype');
+}
+
+@font-face {
+  font-family: 'voluta-Elight';
+  src: url('fonts/voluta-web/Voluta-ExtraLight.woff') format('opentype');
 }
 
 
@@ -91,9 +81,14 @@ body, html {
         color: #FCFAFF;
     }
 
+    .desktop {
+      max-width: 30%;
+    }
+
     .header img {
-      width: 90px;
-      display: block;
+      display: inline-block;
+      width: 100%;
+      margin-top: 3%;
     }
 
     .contain {
@@ -295,13 +290,15 @@ footer li {
   flex-direction: column;
   gap: 10px;
   margin-top: 5%;
+  padding-left: 30px;
+  padding-right: 30px;
   justify-content: center;
   align-items: center;
   z-index: 2;
 }
 
 .hero-inner .symbol {
-  width: 32%;
+  max-width: 32%;
 }
 
 .MHM_name {
@@ -334,7 +331,7 @@ footer li {
 
 
 .swirl {
-  background-image: url("images/swirl.png");
+  background-image: url("images/swirl.webp");
   background-size: cover; 
   background-repeat: no-repeat;
   background-position: center center; 
@@ -374,7 +371,7 @@ margin-top: 8%;
     gap: 20px;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
   }
 
@@ -391,6 +388,7 @@ margin-top: 8%;
 
   .service-block {
     margin: 10px;
+    height: 100%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -418,6 +416,7 @@ margin-top: 8%;
     margin-top: auto;
     text-decoration: none;
     border-radius: 20px;
+    align-self: center;
 }
 
 
@@ -443,6 +442,7 @@ margin-top: 8%;
   margin: 0;
   padding: 0;
   color: white;
+  font-family: voluta-Elight;
 }
   
   .about-hero {
@@ -468,6 +468,11 @@ margin-top: 8%;
     max-width: 500px;
     margin: 0px 20px;
   }
+
+  .company-description h2 {
+    font-family: voluta;
+  }
+  
 
   .highlight {
     color: #E63B2E; 
@@ -495,10 +500,12 @@ margin-top: 8%;
 
   .founder-bio h2 {
     margin-bottom: 0;
+    font-family: voluta;
   }
 
   .founder-bio h4 {
     margin-top: 0;
+    font-family: voluta-Elight;
   }
 
   .founder-bio p {
@@ -525,20 +532,15 @@ margin-top: 8%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("images/design/waves.png");
+    background-image: url("images/design/waves.webp");
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center center; 
     height: 65vh;
   }
-  
-  .design-header h1 {
-    font-size: 3rem;
-    margin: 0;
-    padding: 0;
-    color: white;
-    font-family: xspace;
-    letter-spacing: -1px;
+
+  .design-header img {
+    max-width: 50%;
   }
 
   .fadein {
@@ -572,8 +574,8 @@ margin-top: 8%;
   
   .left-section h2 {
     font-size: 60px;
-    font-weight: bold;
     color: rgb(175, 175, 175);
+    font-family: voluta-Elight;
   }
   
   
@@ -604,6 +606,7 @@ margin-top: 8%;
     color: rgb(175, 175, 175);
     font-size: 18px;
     font-weight: bold;
+    font-family: voluta;
     text-align: left;
     border: none;
     cursor: pointer;
@@ -649,6 +652,7 @@ margin-top: 8%;
   .design-hero h1 {
     text-align: center;
     color: white;
+    font-family: voluta;
   }
 
 
@@ -656,15 +660,19 @@ margin-top: 8%;
     opacity: 1; /* Fade-in the website sections */
   }
 
+  .gallery-cell {
+    height: 650px;
+  }
+
   .gallery-cell .website {
-    height: 100%;
+    height: 70%;
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
-          justify-content: center;
+    -webkit-justify-content: flex-start;
+          justify-content: flex-start;
     -webkit-align-items: center;
           align-items: center;
     /* dim unselected */
@@ -681,7 +689,6 @@ margin-top: 8%;
     -webkit-transform: scale(1);
     transform: scale(1);
   }
-
   
   .website {
     width: 320px;
@@ -708,19 +715,25 @@ margin-top: 8%;
   }
   
   .website p {
-    font-size: 12.5px;
+    font-size: 1rem;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-family: voluta-Elight;
   }
   
   .website a {
-    display: inline-block;
-    margin-top: 10px;
+    display: block;
+    font-family: voluta;
+    width: 100%;
+    box-sizing: border-box;
     padding: 10px 20px;
     background-color: #715AFF;
     color: #ffffff;
     text-decoration: none;
+    text-align: center;
     border-radius: 5px;
+    margin-top: auto; /* Push the link to the bottom */
+    align-self: flex-end; /* Align the link to the bottom */
   }
   
   .website a:hover {
@@ -776,13 +789,14 @@ margin-top: 8%;
 
   .media-tagline {
     text-align: center;
-    padding-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 20px;
   }
 
   .media-tagline h1 {
     color: white;
     font-style: italic;
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   .center-container {
@@ -802,25 +816,23 @@ margin-top: 8%;
   .iphone {
     flex: 1;
     padding: 20px;
-    margin-right: 150px;
-    margin-top: 70px;
-    margin-left: -200px;
+    margin-left: -5%;
   }
 
   .iphone img {
-    width: 170%;
+    width: 120%;
   }
   
   .iphone-description {
     flex: 1;
     margin-top: -10%;
-    padding-left: 35px;
-    padding-right: 35px;
   }
   
   
   .iphone-description p {
-    font-size: 1.75rem;
+    font-size: 1.55rem;
+    font-family: voluta-Elight;
+    max-width: 480px;
     color: #fff;
     text-align: left;
     line-height: 35px;
@@ -937,7 +949,7 @@ margin-top: 8%;
   .category-overlay {
     position: absolute;
     font-size: 1.18rem;
-    margin-bottom: 6.5px;
+    margin-bottom: 4px;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -1250,7 +1262,6 @@ padding: 0px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0px -3px 20px #d4000484;
 }
 
 .header h1 {
@@ -1586,8 +1597,12 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 
 .about-header {
   text-align: center;
-  margin-top: 150px;
+  margin-top: 120px;
   margin-bottom: 50px;
+}
+
+.about-header img {
+  max-width: 80%;
 }
 
 .about-header h1 {
@@ -1660,11 +1675,11 @@ color: white;
 
 .founder-bio {
   max-width: 100%;
-  margin: 0;
+  margin: 0 auto;
   margin-top: 20px;
 }
 
-.founder-bio h2 {
+.founder-bio h2 h4 {
   text-align: center;
 }
 
@@ -1686,18 +1701,15 @@ color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("images/design/waves.png");
+  background-image: url("images/design/waves.webp");
   background-size: cover; 
   background-repeat: no-repeat;
   background-position: center center; 
   height: 65vh;
 }
 
-.design-header h1 {
-  font-size: 3rem;
-  margin: 0;
-  padding: 0;
-  color: white;
+.design-header img {
+  max-width: 50%;
 }
 
 .skills {
@@ -1807,16 +1819,14 @@ color: white;
   margin-bottom: -40px;
 }
 
-
-
 .gallery-cell .website {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
-        justify-content: center;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
   -webkit-align-items: center;
         align-items: center;
   /* dim unselected */
@@ -1860,7 +1870,7 @@ color: white;
 }
 
 .website p {
-  font-size: 12.5px;
+  font-size: 1rem;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -1873,6 +1883,8 @@ color: white;
   color: #ffffff;
   text-decoration: none;
   border-radius: 5px;
+  margin-top: auto; /* Push the link to the bottom */
+  align-self: flex-end; /* Align the link to the bottom */
 }
 
 .website a:hover {
@@ -1913,7 +1925,7 @@ color: white;
   margin-top: 20%;
   width: 100%;
   height: 100%;
-  background-image: url("images/media_background.jpg");
+  background-image: url("images/media/media_background.jpg");
   background-size: cover; 
   background-repeat: no-repeat;
   background-position: center center; 
@@ -2042,6 +2054,10 @@ color: white;
   background: crimson;
 }
 
+.card__face--front h2 {
+  padding: 0 5px;
+}
+
 .card__face--back {
   background: slateblue;
   transform: rotateY(180deg);
@@ -2050,14 +2066,15 @@ color: white;
 /* PHOTOGRAPHY */
 
 .photo-header {
-  background-color: #8141B9;
   text-align: center;
   padding: 20px;
-  margin-top: 25%;
+  margin-top: 22%;
+  height: 25vh;
+  width: 90%;
 }
 
-.photo-header h1 {
-  color: #FFF;
+.photo-header img {
+  max-width: 90%;
 }
 
 .photo-hero {
@@ -2085,15 +2102,17 @@ color: white;
 }
 
 .category-link {
-  flex: 1 0 300px;
+  flex: 1 0 270px;
   max-width: 500px;
   margin: 10px;
+  margin-bottom: 0;
 }
+
 
 .category-overlay {
   position: absolute;
   font-size: 1.18rem;
-  margin-bottom: 6.5px;
+  margin-bottom: 4px;
   bottom: 0;
   left: 0;
   width: 100%;
