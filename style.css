@@ -297,8 +297,15 @@ footer li {
   z-index: 2;
 }
 
-.hero-inner .symbol {
+.logopic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logopic img {
   max-width: 32%;
+  padding: 0 25px;
 }
 
 .MHM_name {
@@ -1525,7 +1532,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     text-align: center;
   }
 
-  .hero-inner .symbol {
+  .logopic img {
     max-width: 32%;
     object-fit: cover;
   }
