@@ -104,7 +104,7 @@ body, html {
     }
 
     .contain a:hover {
-        color: #9f88cf;
+        color: #BA93F9;
       }
 
     .drop ul {
@@ -156,7 +156,7 @@ body, html {
     }
 
     .nav li ul a:hover {
-      color: #B396F2;
+      color: #BA93F9;
     }
 
 
@@ -610,7 +610,7 @@ margin-top: 8%;
     border-radius: 10px;
     padding: 12px 20px;
     background-color: transparent;
-    color: rgb(175, 175, 175);
+    color: #FCFAFF;
     font-size: 18px;
     font-weight: bold;
     font-family: voluta;
@@ -621,14 +621,14 @@ margin-top: 8%;
   }
   
   .accordion-button:hover {
-    background-color: #af0066;
+    background-color: #D41A02;
   }
   
   .accordion-content {
     max-height: 0;
     opacity: 0;
     padding: 0;
-    color: rgb(175, 175, 175);
+    color: #FCFAFF;
     overflow: hidden;
     transition: max-height .5s ease, opacity 2s ease;
   }
@@ -699,7 +699,7 @@ margin-top: 8%;
   
   .website {
     width: 320px;
-    background: linear-gradient(45deg, #8141B9, #D5093D);
+    background: #A486D4;
     padding: 20px;
     color: #FFF;
     margin: 20px;
@@ -734,8 +734,8 @@ margin-top: 8%;
     width: 100%;
     box-sizing: border-box;
     padding: 10px 20px;
-    background-color: #715AFF;
-    color: #ffffff;
+    background-color: #FCFAFF;
+    color: #A486D4;
     text-decoration: none;
     text-align: center;
     border-radius: 5px;
@@ -744,7 +744,8 @@ margin-top: 8%;
   }
   
   .website a:hover {
-    background-color: #af0066;
+    background-color: #6610F2;
+    color: #FCFAFF;
   }
 
 .row {
@@ -895,11 +896,11 @@ margin-top: 8%;
   }
   
   .card__face--front {
-    background: crimson;
+    background: #D41A02;
   }
   
   .card__face--back {
-    background: slateblue;
+    background: #A486D4;
     transform: rotateY(180deg);
   }
 
