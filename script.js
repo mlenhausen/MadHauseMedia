@@ -51,6 +51,73 @@ window.addEventListener("load", function () {
   });
 });
 
+// Javascript to make sure mobile drop down menu pulls back up upon click and
+// for the drop down menu animation
+document.addEventListener('DOMContentLoaded', function() {
+  function toggleSubMenu(event) {
+    event.stopPropagation(); // Prevents the event from triggering on parent elements
+
+    const element = event.currentTarget;
+    const submenu = element.querySelector('ul');
+    const icon = element.querySelector('i');
+    
+    if (element.classList.contains('open')) {
+      // Collapse submenu
+      element.classList.remove('open');
+      submenu.style.maxHeight = '0';
+    } else {
+      // Expand submenu
+      closeOpenSubMenu(); // Ensure other submenus are closed
+      element.classList.add('open');
+      submenu.style.maxHeight = submenu.scrollHeight + 'px';
+      submenu.style.transform = 'translateY(20px)'; // Push the submenu down
+    }
+
+    icon.style.transform = element.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
+  }
+
+  // Function to close any open submenus
+  function closeOpenSubMenu() {
+    const openDropdown = document.querySelector('.drop.open');
+    if (openDropdown) {
+      const submenu = openDropdown.querySelector('ul');
+      const icon = openDropdown.querySelector('i');
+      
+      openDropdown.classList.remove('open');
+      submenu.style.maxHeight = '0';
+      icon.style.transform = 'rotate(0deg)';
+    }
+  }
+
+  // Add event listener to document to close the submenu when clicking outside
+  document.addEventListener('click', function(event) {
+    if (!event.target.closest('.sidebarMenuInner')) {
+      closeOpenSubMenu();
+    }
+  });
+
+  // Add event listeners to main menu items to close the submenu if clicked
+  document.querySelectorAll('.sidebarMenuInner > li:not(.drop)').forEach(item => {
+    item.addEventListener('click', function(event) {
+      event.stopPropagation();
+      closeOpenSubMenu();
+    });
+  });
+
+  // Add event listeners to the submenu toggle items
+  document.querySelectorAll('.drop').forEach(drop => {
+    drop.addEventListener('click', toggleSubMenu);
+  });
+
+  // Ensure submenu items do not propagate the click event to prevent closing the submenu
+  document.querySelectorAll('.drop ul li a').forEach(subItem => {
+    subItem.addEventListener('click', function(event) {
+      event.stopPropagation();
+    });
+  });
+});
+
+
 // JavaScript to handle the flipping effect on click
 document.addEventListener("DOMContentLoaded", function () {
   const mediaCards = document.querySelectorAll(".media-service-card");

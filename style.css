@@ -107,15 +107,29 @@ body, html {
         color: #BA93F9;
       }
 
+    .drop {
+      margin-left: 15px !important;
+      margin-right: 15px !important;
+    }
+
     .drop ul {
         border-radius: 9px;
     }
 
+    .drop a {
+      padding-left: 15px;
+      padding-right: 12px;
+    }
+
+    .nav {
+      justify-content: space-evenly;
+    }
 
     .nav li {
         float: left;
         width: 100px;
         text-align: center;
+        justify-content: space-evenly;
         list-style: none;
         position: relative;
         padding: 0;
@@ -126,6 +140,7 @@ body, html {
       display: block;
       text-decoration: none;
       padding: 18px 0px;
+      
     }
 
     .nav li ul {
@@ -818,19 +833,18 @@ margin-top: 8%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 0px;
+    padding-bottom: 100px;
   }
   
   .iphone {
     flex: 1;
-    padding: 20px;
-    margin-left: -5%;
+    width: 100%;
+    height: 700px;
+    padding: 0px;
+    margin-top: -5%;
   }
 
-  .iphone img {
-    width: 120%;
-  }
-  
+
   .iphone-description {
     flex: 1;
     margin-top: -10%;
@@ -957,7 +971,7 @@ margin-top: 8%;
   .category-overlay {
     position: absolute;
     font-size: 1.18rem;
-    margin-bottom: 4px;
+    margin-bottom: 3.6px;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -1139,6 +1153,7 @@ input[type=email], select, textarea {
 .contactbutton {
     color: #313149;
     padding: 5px;
+    margin-top: 15px;
     display: inline-block;
     text-align: center;
     position: relative;
@@ -1447,25 +1462,14 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 
   .sidebarMenuInner li ul {
     position: absolute;
-    display: none;
-    margin: 0;
-    padding: 0;
     border-radius: 9px;
     padding: 0px 5px 0px 5px;
     z-index: 1;
     top: 100%;
     left: 0;
-    text-align: left;
-  }
-
-  .sidebarMenuInner .drop:hover > ul {
-    display: block;
-  }
-  
-
-  .sidebarMenuInner li:hover ul {
-    display: inline-block;
+    display: none;
     background-color: #FFF;
+    
   }
 
   
@@ -1480,26 +1484,48 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     transform: translateX(-50%);
 }
 
-
-
-.sidebarMenuInner li:hover > ul {
-  display: block;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #FFF;
-}
-
 .sidebarMenuInner ul li a {
-  color: #100224;
+  color: #915dda;
   text-decoration: none;
   display: block;
   padding: 10px;
 }
 
-.sidebarMenuInner ul li:hover {
-  background-color: #E5E5E5;
+/* dropdown behavior and styling */
+.sidebarMenuInner .drop ul {
+  display: block;
+  position: relative;
+  text-align: center; 
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  max-height: 0; 
+  overflow: hidden; 
+  transition: max-height 0.5s ease-in-out; 
 }
+
+.sidebarMenuInner .drop ul li {
+  display: block; 
+  padding: 10px 0; 
+}
+
+.sidebarMenuInner li {
+  transition: margin-top 0.5s ease-in-out; 
+}
+
+.sidebarMenuInner .drop.open ul {
+  max-height: 500px; 
+}
+
+.sidebarMenuInner .drop i {
+  transition: transform 0.3s ease;
+}
+
+.sidebarMenuInner .drop.open i {
+  transform: rotate(180deg);
+}
+
 
 /* HOME PAGE */
 
@@ -1988,20 +2014,21 @@ color: white;
   justify-content: center;
   padding-bottom: 50px;
   overflow-x: hidden;
+  height: 100vh;
+  margin-top: -50px;
 }
 
 .iphone {
   flex: 1;
+  flex-grow: 1;
   padding: 0px;
   margin: 0 auto;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.iphone img {
-  width: 150%;
-}
 
 
 .iphone-description {
@@ -2131,7 +2158,7 @@ color: white;
 .category-overlay {
   position: absolute;
   font-size: 1.18rem;
-  margin-bottom: 4px;
+  margin-bottom: 3.5px;
   bottom: 0;
   left: 0;
   width: 100%;
