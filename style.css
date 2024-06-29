@@ -446,6 +446,82 @@ margin-top: 8%;
     background-color: #6610F2;
 }
 
+.client-logos {
+  text-align: center;
+  padding: 50px 0px;
+  background-color: #a591f8;
+  color: #D8E4FF;
+  overflow: hidden; /* Ensure logos do not overflow */
+  position: relative;
+  z-index: 70;
+}
+
+
+.client-logos h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.client-logos p {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #100f14;
+  max-width: 50%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  padding-top: 10px;
+  
+}
+
+.logo-carousel {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 20px 0;
+}
+
+.logo-slide {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 60s linear infinite;
+}
+
+.top-row .logo-slide {
+  animation: scroll-left 60s linear infinite;
+}
+
+.bottom-row .logo-slide { 
+  animation: scroll-right 60s linear infinite;
+}
+
+.logo-slide img {
+  display: inline-block;
+  max-height: 80px;
+  margin: 10px 20px;
+}
+
+.top-row img {
+  max-height: 100px;
+}
+
+@keyframes scroll-left {
+  0% {
+      transform: translateX(0%);
+  }
+  100% {
+      transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+      transform: translateX(-50%);
+  }
+  100% {
+      transform: translateX(0%);
+  }
+}
+
 
 
 /* -- ABOUT PAGE -- */
