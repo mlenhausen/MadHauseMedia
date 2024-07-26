@@ -16,6 +16,23 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="images/images/MHM_LOGO_BlackBkgd.png">
     <script src="https://kit.fontawesome.com/94c6583cfa.js" crossorigin="anonymous"></script>
+    <!-- disable right clicking images images -->
+    <script>
+      document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+  </script>
+  <!-- disable drag and drop images -->
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('img');
+        images.forEach(function(img) {
+          img.ondragstart = function() {
+            return false;
+          };
+        });
+      });
+  </script>
 </head>
 
 <body>
@@ -26,6 +43,7 @@
         <a class="back" href="photography.html"><i class="fa-solid fa-angle-left"></i>Back</a>
         <ul class="back-options">
             <li><a href="bts.html">BTS</a></li>
+            <li><a href="food.html">Food</a></li>
             <li><a href="lifestyle.html">Lifestyle</a></li>
             <li><a href="nature.html">Nature</a></li>
           </ul>
@@ -45,13 +63,15 @@
         <img src="images/product/houtsauce.webp" alt="Hot Sauce Photo">
       </div>
       <div class="photo-item fadein">
-        <img src="images/product/A7_03322.webp" alt="Verite Wine Bottle Photo">
-      </div>
-      <div class="photo-item fadein">
         <img src="images/product/watch_edit.webp" alt="Watch Photo">
       </div>
     </div>
 
+    <div id="lightbox" class="lightbox">
+      <span class="close" onclick="closeLightbox()">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+    
     </main>
 
     <footer>

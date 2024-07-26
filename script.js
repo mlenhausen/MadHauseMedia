@@ -160,6 +160,47 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+//Open up a lightbox for photos in photography tabs
+document.addEventListener('DOMContentLoaded', function() {
+  const images = document.querySelectorAll('.photo-grid .photo-item img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  images.forEach(function(img) {
+    img.ondragstart = function() {
+      return false;
+    };
+
+    img.addEventListener('click', function() {
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'block';
+      setTimeout(function() {
+        lightbox.classList.add('show');
+      }, 10); // Slight delay to allow transition
+    });
+  });
+
+  document.querySelector('.close').addEventListener('click', function() {
+    lightbox.classList.remove('show');
+    setTimeout(function() {
+      lightbox.style.display = 'none';
+    }, 500); // Wait for the transition to finish
+  });
+
+  // Close the lightbox when clicking outside the image
+  lightbox.addEventListener('click', function(event) {
+    if (event.target === lightbox) {
+      lightbox.classList.remove('show');
+      setTimeout(function() {
+        lightbox.style.display = 'none';
+      }, 500); // Wait for the transition to finish
+    }
+  });
+});
+
+
+
+
 
 
 

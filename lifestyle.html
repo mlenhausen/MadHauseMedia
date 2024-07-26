@@ -17,6 +17,23 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="images/images/MHM_LOGO_BlackBkgd.png">
     <script src="https://kit.fontawesome.com/94c6583cfa.js" crossorigin="anonymous"></script>
+    <!-- disable right clicking images images -->
+    <script>
+      document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+  </script>
+  <!-- disable drag and drop images -->
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('img');
+        images.forEach(function(img) {
+          img.ondragstart = function() {
+            return false;
+          };
+        });
+      });
+  </script>
 </head>
 
 <body>
@@ -27,6 +44,7 @@
         <a class="back" href="photography.html"><i class="fa-solid fa-angle-left"></i>Back</a>
         <ul class="back-options">
             <li><a href="bts.html">BTS</a></li>
+            <li><a href="food.html">Food</a></li>
             <li><a href="nature.html">Nature</a></li>
             <li><a href="product.html">Product</a></li>
           </ul>
@@ -86,7 +104,11 @@
       </div>
     </div>
 
-      <!-- Add more photo items here -->
+    <div id="lightbox" class="lightbox">
+      <span class="close" onclick="closeLightbox()">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+
     </main>
 
     <footer>
