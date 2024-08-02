@@ -240,7 +240,7 @@ footer li {
 
 /* LOADING SCREEN */
 
-.loading-animation {
+/*.loading-animation {
   position: fixed;
   top: 0;
   left: 0;
@@ -262,20 +262,16 @@ footer li {
   }
 }
 
-/* Add styles for the loading SVG background */
 .loading-svg {
-  /* Set the SVG as the background image */
   background-image: url("images/ripples.svg");
-  /* Set background properties to control its appearance */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  /* Set the size of the loading SVG element */
   width: 100px;
   height: 100px;
-  /* Add any additional styles you want for the SVG */
-  /* For example, you can add padding, border, etc. */
 }
+  */
+
 /* -- HOME PAGE -- */
 
 .hero {

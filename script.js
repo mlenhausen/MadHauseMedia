@@ -1,8 +1,9 @@
   // JavaScript to hide the loading animation after the page loads
-window.addEventListener("load", function () {
-  const loadingAnimation = document.querySelector(".loading-animation");
-  loadingAnimation.style.display = "none";
-});
+//window.addEventListener("load", function () {
+  //const loadingAnimation = document.querySelector(".loading-animation");
+ // loadingAnimation.style.display = "none";
+//});
+
 
   document.addEventListener('DOMContentLoaded', function () {
   const accordionButtons = document.querySelectorAll(".accordion-button");
@@ -54,8 +55,12 @@ window.addEventListener("load", function () {
 // Javascript to make sure mobile drop down menu pulls back up upon click and
 // for the drop down menu animation
 document.addEventListener('DOMContentLoaded', function() {
+  let isMobile = window.matchMedia("(max-width: 992px)").matches;
+
   function toggleSubMenu(event) {
     event.stopPropagation(); // Prevents the event from triggering on parent elements
+
+    if (!isMobile) return;
 
     const element = event.currentTarget;
     const submenu = element.querySelector('ul');
@@ -115,7 +120,11 @@ document.addEventListener('DOMContentLoaded', function() {
       event.stopPropagation();
     });
   });
-});
+    // Recalculate isMobile when the window is resized
+    window.addEventListener('resize', function() {
+      isMobile = window.matchMedia("(max-width: 992px)").matches;
+    });
+  });
 
 
 // JavaScript to handle the flipping effect on click

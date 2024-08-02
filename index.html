@@ -13,13 +13,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MadHause Media offers top-notch photography, media production, and design services to help elevate your brand's presence or build your story. Learn more about our creative solutions.">
     <title>MadHause Media</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="images/MHM_LOGO_BlackBkgd.png">
     <script src="https://kit.fontawesome.com/94c6583cfa.js" crossorigin="anonymous"></script>
 </head>
     <body style="overscroll-behavior-y: none;">
-        <div class="loading-animation"><div class="loading-svg"></div></div>
+        <!--<div class="loading-animation"><div class="loading-svg"></div></div>-->
         <div class="header">
             <div class="mobile">
                 <h1><a href="index.html"><img src="images/Asset 4mhmlogo_circledemo.webp" alt="MHM logo"></a></h1>
@@ -35,9 +36,9 @@
                         <li><a href="about.html">About</a></li>
                         <li class="drop">Services <i class="fa fa-angle-down" style="font-size:10px;"></i>
                             <ul>
-                                <li><a uk-scroll href="design.html">Design</a></li>
-                                <li><a uk-scroll href="media.html">Media</a></li>
-                                <li><a uk-scroll href="photography.html">Photography</a></li>
+                                <li><a href="photography.html">Photography</a></li>
+                                <li><a href="media.html">Media</a></li>
+                                <li><a href="design.html">Design</a></li>
                             </ul>
                         </li>
                         <li><a href="contact.html">Contact</a></li>
@@ -51,9 +52,9 @@
                     <li><a href="about.html">About</a></li>
                     <li class="drop"><a href="#">Services <i class="fa fa-angle-down" style="font-size:10px;"></i></a>
                         <ul>
-                            <li><a href="design.html">Design</a></li>
-                            <li><a href="media.html">Media</a></li>
                             <li><a href="photography.html">Photography</a></li>
+                            <li><a href="media.html">Media</a></li>
+                            <li><a href="design.html">Design</a></li>
                         </ul>
                     </li>
                     <li><a href="contact.html">Contact</a></li>
@@ -61,8 +62,8 @@
             </div>
         </div>
         <div class="hero" id = "hero">
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+            <script src="three.r134.min.js"></script>
+            <script src="vanta.net.min.js"></script>
             <script>
                 VANTA.NET({
   el: "#hero",
@@ -95,28 +96,28 @@
             <h1>Services</h1>
             <div class="services-inner fadein">
                 <div class="service-block">
-                    <h2>Design</h2>
-                    <p>Our web design services offer visually stunning and user-friendly websites that bring your 
-                        online presence to life. Additionally, we provide comprehensive branding solutions, including 
-                        logo design, to ensure your brand stands out in the competitive market. Our designs seamlessly 
-                        combine aesthetics and functionality, creating unique and engaging experiences for your audience.</p>
-                    <a href="design.html">Learn More</a>
-                </div>
-                <div class="service-block">
-                    <h2>Media</h2>
-                    <p>As a versatile production company, our services encompass social media management and content creation, production, and 
-                        expert editing, enabling us to craft captivating narratives on the screen. Whether it's a 
-                        short film, commercial, or documentary, each project receives meticulous attention. We are 
-                        dedicated to creating powerful stories that evoke emotion and resonate with audiences.</p>
-                    <a href="media.html">Learn More</a>
-                </div>
-                <div class="service-block">
                     <h2>Photography</h2>
                     <p>Our photography services capture diverse subjects, ranging from pristine product shots to 
                         authentic lifestyle moments and breathtaking nature scenes. With a keen eye for detail, our 
                         photos celebrate the essence of various environments. Through visual storytelling, we bring 
                         out the beauty and uniqueness of each subject. Feel free to check out our photography portfolio.</p>
                     <a href="photography.html">Learn More</a>
+                </div>
+                <div class="service-block">
+                    <h2>Media</h2>
+                    <p>As a versatile production company, our services encompass social media management and content creation, production, and 
+                        expert editing, enabling us to craft captivating narratives on the screen. Whether it's a 
+                        short film or corporate piece, each project receives meticulous attention. We are 
+                        dedicated to creating powerful stories that evoke emotion and resonate with audiences.</p>
+                    <a href="media.html">Learn More</a>
+                </div>
+                <div class="service-block">
+                    <h2>Design</h2>
+                    <p>Our web design services offer visually stunning and user-friendly websites that bring your 
+                        online presence to life. Additionally, we provide comprehensive branding solutions, including 
+                        logo design, to ensure your brand stands out in the competitive market. Our designs seamlessly 
+                        combine aesthetics and functionality, creating unique and engaging experiences for your audience.</p>
+                    <a href="design.html">Learn More</a>
                 </div>
             </div>
         </div>
