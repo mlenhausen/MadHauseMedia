@@ -1231,6 +1231,32 @@ margin-top: 8%;
     text-decoration: none;
     cursor: pointer;
   }
+
+  .section-title {
+    grid-column: 1 / -1;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    text-align: left;
+    color: #f0f0f0; 
+    background-color: rgba(255, 255, 255, 0.1); 
+    padding: 10px 20px;
+    border-radius: 20px; 
+    width: fit-content;
+  }
+
+.chef-credit {
+    grid-column: 1 / -1;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 0px;
+    color: #ccc; 
+}
+
+.chef-credit a {
+  color: #f0f0f0;
+}
+
   
 
 
