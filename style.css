@@ -907,8 +907,9 @@ margin-top: 8%;
     justify-content: center;
     padding-bottom: 100px;
   }
+
   
-  .iphone {
+.iphone {
     flex: 1;
     width: 100%;
     height: 700px;
@@ -2624,11 +2625,11 @@ color: white;
   justify-content: center;
   padding-bottom: 50px;
   overflow-x: hidden;
-  height: 100vh;
+  /*height: 100vh;*/
   margin-top: -50px;
 }
 
-.iphone {
+/*.iphone {
   flex: 1;
   flex-grow: 1;
   padding: 0px;
@@ -2637,7 +2638,23 @@ color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+}*/
+
+spline-viewer {
+  width: 100%;
+  max-width: 400px; /* You can adjust this for smaller screens */
+  height: auto;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
 }
+
+.iphone {
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0 auto;
+}
+
 
 
 
