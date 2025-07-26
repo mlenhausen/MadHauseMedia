@@ -207,6 +207,60 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// for anchor link scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (!target) return;
+
+    // Smooth scroll with faster speed
+    const startPosition = window.pageYOffset;
+    const targetPosition = target.getBoundingClientRect().top;
+    const startTime = performance.now();
+    const duration = 500; // in ms — lower = faster
+
+    function scrollStep(currentTime) {
+      const timeElapsed = currentTime - startTime;
+      const run = easeInOutQuad(timeElapsed, startPosition, targetPosition, duration);
+      window.scrollTo(0, run);
+      if (timeElapsed < duration) requestAnimationFrame(scrollStep);
+    }
+
+    function easeInOutQuad(t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t + b;
+      t--;
+      return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(scrollStep);
+  });
+});
+
+
+// opening custom quote options //
+  const openBtn = document.getElementById('openQuoteModal');
+  const modal = document.getElementById('quoteModal');
+  const closeBtn = document.getElementById('closeQuoteModal');
+
+  openBtn.addEventListener('click', () => {
+    modal.style.display = 'flex';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+
+  
+
+
 
 
 

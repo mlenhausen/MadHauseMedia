@@ -200,7 +200,6 @@ body, html {
 
 /* -- FOOTER -- */ 
 footer {
-  height: 60px;
   padding-bottom: 5px;
   display: flex;
   flex-direction: column;
@@ -209,6 +208,7 @@ footer {
   margin-top: auto;
   z-index: 10;
   background-color: #100f14;
+  position: relative;
 }
 
 footer img {
@@ -858,7 +858,7 @@ margin-top: 8%;
     align-items: center;
 }
 
-/* -- MEDIA PAGE -- */
+/* -- VIDEOGRAPHY PAGE -- */
 
 
 .media-header {
@@ -990,6 +990,90 @@ margin-top: 8%;
     transform: rotateY(180deg);
   }
 
+/*portfolio carousel*/
+
+.video-carousel {
+  padding: 2rem 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-carousel h1,
+.video-carousel p {
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.carousel {
+  background: transparent;
+}
+
+.carousel-cell {
+  width: 90vw;
+  max-width: 640px;
+  margin-right: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.carousel-cell iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+}
+
+.carousel-cell a {
+  color: white;
+}
+
+
+
+/* pricing */
+
+.video-pricing {
+  padding: 2rem;
+  padding-bottom: 4rem;
+  color: #fff;
+  background-color: #100f14;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.video-pricing h1 {
+font-size: 2rem;
+text-align: center;
+}
+
+.service-section {
+  margin-bottom: 3rem;
+  justify-content: center;
+  
+}
+
+.service-section h2 {
+  font-size: 1.5rem;
+  color: #FF5A5F;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.service-section p {
+  text-align: center;
+}
+
+.pricing-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.fine-print {
+  font-size: 0.875rem;
+  color: #ccc;
+  margin-top: 1rem;
+}
 
 
 /* -- PHOTOGRAPHY PAGE -- */
@@ -1099,6 +1183,28 @@ margin-top: 8%;
   .categories-section a:hover {
     background-color: #D5093D;
   }
+
+  /* pricing */
+  .pricing-title-photo {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+  }
+
+  .pricing-note {
+    color: white;
+    text-align: center;
+  }
+
+  .pricing-link {
+    background-color: #6610F2;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: white;
+    margin: 2%;
+  }
+  
 
   /* - individual photography pages - */
 
@@ -1257,7 +1363,362 @@ margin-top: 8%;
   color: #f0f0f0;
 }
 
+
+
+
+
+
+/* --- PRICING PAGE --- */
+/* PRICING OVERVIEW STYLES */
+.pricing-overview {
+  background-color: #100f14;
+  padding: 60px 20px;
+}
+
+.overview-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.overview-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.overview-header p {
+  font-size: 1.125rem;
+  color: #9d95b4;
+  margin-bottom: 40px;
+}
+
+.overview-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.overview-card {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 10px 30px rgba(208, 194, 255, 0.719);
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+  text-align: left;
+  border: 7px solid #715AFF;
+}
+
+.overview-card.dark {
+  background: #715AFF;
+  color: white;
+  border: 5px solid #fff;
+}
+
+.overview-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.overview-card p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: inherit;
+}
+
+.card-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-btn {
+  display: inline-block;
+  background: #715AFF;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.card-btn:hover {
+  background: #5c4ad3;
+}
+
+.card-btn.outline {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.card-btn.outline:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.custom-list {
+  margin: 0 0 20px 0;
+  padding-left: 20px;
+}
+
+.custom-list li {
+  list-style-type: disc;
+  margin-bottom: 8px;
+}
+
+/* Modal Overlay */
+.quote-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Container */
+.quote-modal {
+  background: #ffffff;
+  color: #333;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 800px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Close Button */
+.close-modal {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #999;
+}
+
+/* Option Layout */
+.quote-options {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.quote-option {
+  flex: 1;
+  text-align: center;
+}
+
+.quote-option h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.quote-option p {
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.quote-btn {
+  background-color: #715AFF;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.quote-btn:hover {
+  background-color: #5c4ad3;
+}
+
+/* Divider */
+.divider {
+  width: 1px;
+  background-color: #ccc;
+}
+
+
+
+/* Responsive Stack */
+@media (max-width: 700px) {
+  .quote-options {
+    flex-direction: column;
+  }
+  .divider {
+    display: none;
+  }
+}
+
+
+
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+
+.pricing-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.pricing-service {
+  margin-bottom: 5rem;
+  background-color: white;
+  padding: 12px 20px;
+  border-radius: 20px;
+  margin: 5%;
+}
+
+
+.pricing-service-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.pricing-intro {
+  font-size: 1rem;
+  color: #100f14;
+  margin-bottom: 2rem;
+  justify-content: center;
+  text-align: center;
+  display: flex;
   
+}
+
+.pricing-section {
+  padding: 2rem;
+  margin-top: 10px;
+  background-color: #100f14;
+  border-radius: 20px;
+  display: block;
+  padding-bottom: 4rem;
+}
+
+.pricing-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #100f14;
+}
+
+.pricing-note {
+font-size: 1rem;
+margin-bottom: 2rem;
+}
+
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.pricing-card {
+  flex: 1 1 300px;
+  color: white;
+  max-width: 320px;
+  background-color: #9681ea;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+}
+
+.pricing-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 1.25rem;
+  display: inline-block; 
+  padding: 0.25rem 0.75rem;    
+  background-color: #f8464c;  
+  border-radius: 1rem; 
+  box-shadow: 3px 4px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-card ul li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+
+
+.pricing-details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem !important;
+  color:#100f14;
+  padding: .5rem;
+  background-color: #f9f9f9;
+  border-radius: 2.5rem;
+  box-shadow: 15px 15px 0px 0px rgba(207, 192, 255, 0.635);
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.pricing-details h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.pricing-details ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  color: #444;
+}
+
+.pricing-details li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+
+
+
+  
+
+
 
 
 /* -- CONTACT PAGE -- */
@@ -1380,6 +1841,9 @@ input[type=email], select, textarea {
   flex-direction: column;
   justify-content: center;
 }
+
+
+
 
 
 
@@ -1954,7 +2418,7 @@ color: white;
 }
 
 .accordion-button:hover {
-  background-color: #D41A02;
+  background-color: #DC143C;
 }
 
 .accordion-content {
@@ -2099,7 +2563,7 @@ color: white;
   align-items: center;
 }
 
-/* -- MEDIA PAGE -- */
+/* -- VIDEOGRAPHY PAGE -- */
 
 
 .media-header {
@@ -2148,6 +2612,8 @@ color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .media-container {
@@ -2253,7 +2719,14 @@ color: white;
   transform: rotateY(180deg);
 }
 
-/* PHOTOGRAPHY */
+
+
+
+
+
+
+
+/* -- PHOTOGRAPHY PAGE -- */
 
 .photo-header {
   text-align: center;
@@ -2359,6 +2832,13 @@ color: white;
   background-color: #D5093D;
 }
 
+.pricing-card {
+  width: 100%;
+  flex: 1 1 100%;
+  box-sizing: border-box;
+  padding: 1rem; 
+}
+
 /* - individual photography pages - */
 
 .back {
@@ -2454,6 +2934,44 @@ color: white;
   height: auto;
   border-radius: 0px;
 }
+
+/* Pricing PAGE */
+
+.overview-card {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 5px 10px rgba(208, 194, 255, 0.719);
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+  text-align: left;
+}
+
+.pricing-service {
+  padding: 5px 5px;
+  margin: 5%
+}
+
+.pricing-section {
+  padding: 5px 5px;
+  padding-top: 20px;
+}
+
+.video-pricing {
+  padding: 5px 5px;
+}
+
+.pricing-details {
+max-width: 100%;
+background-color: #f9f9f9;
+border-radius: 1rem;
+box-shadow: 0px 0px 0px 0px;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
+}
+
 
 /* -- CONTACT PAGE -- */
 input[type=text], select, textarea {
